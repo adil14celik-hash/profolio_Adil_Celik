@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mediaqueries.css">
+
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            Adil CELIK
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li> <a href="#about"> About</a></li>
+                <li><a href="#experience"> Expérience</a></li>
+                <li><a href="#projets"> Projets</a></li>
+                <li><a href="#contact"> Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"> Adil CELIK</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li> <a href="#about" onclick="toggleMenu()"> About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()"> Expérience</a></li>
+                <li><a href="#expériences" onclick="toggleMenu()"> Projets</a></li>
+                <li><a href="#contact" onclick="toggleMenu()"> Contact</a></li>
+            </div>
+        </div>
+
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./img/image_portfoliot.jpg" alt="Adil photo de présentation" id="image1">
+            </img>
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1"> Bonjour, je suis</p>
+            <h1 class="title"> Adil CELIK</h1>
+            <p class="section__text__p2"> Etudiant à la sorbonne</p>
+
+
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./CV_Adil_CELIK(st).pdf')">Mon CV</button>
+                <!--sert à créer un bouton-->
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info </button>
+                <!--renvoie vers la section des contacts-->
+
+            </div>
+            <div id="socials-container ">
+                <img src="./img/linkedin.png" alt="Mon profil linkedin" class="icon" onclick="location.href='https://www.linkedin.com/in/adil-celik-90954a365/'">
+                <img src="./img/img_gethub.png" alt="Git hub" class="icon" onclick="location.href='https://github.com/adil14celik-hash?tab=repositories'">
+            </div>
+        </div>
+    </section>
+    <section id=" about ">
+        <p class="section__text__p1 ">Pour en savoir plus sur moi</p>
+        <h1 class=" title ">Sur moi</h1>
+        <div class="section-container ">
+            <div class=" section__pic-container ">
+                <img src="./img/serieux.jpg " alt=" " class=" about-pic " />
+            </div>
+            <div class=" about-details-container ">
+                <div class=" about-containers ">
+                    <div class=" details-container ">
+                        <img src="./img/dev.jpg " alt="Experince icon " class=" icon ">
+                        <h3>Expérience</h3>
+                        <p>+ 2 mois<br/> Développeur Site Web</p>
+                    </div>
+                    <div class="details-container ">
+                        <img src="./img/educ.avif " alt=" education icon " class=" icon ">
+                        <h3>Expérience scolaire</h3>
+                        <p>Bac +2<br/> Licence mathématiques et informatique applquées aux sciences humaines et sociales </p>
+                    </div>
+                </div>
+                <div class="text-container ">
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/OIP.webp " alt=" flèche vers le bas " class="icon arrow " onclick="location.href='./#about' " />
+    </section>
+    <section id="experience ">
+        <p class="section__text__p1 "> Explorez mes expériences</p>
+        <h1 class="title ">Experience</h1>
+        <div class="experience-details-container ">
+            <div class="about-containers ">
+                <div class="details-container ">
+                    <h2 class=" experience-sub-title ">Développement Front-end</h2>
+                    <div class="article-container ">
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Medium</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>R studio</h3>
+                                <p>Débutant</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>Java</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>Python</h3>
+                                <p>Intermédiare</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+                            <div>
+                                <h3>SQL</h3>
+                                <p>Medium</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>PHP</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container ">
+                    <h2 class=" experience-sub-title ">Formation </h2>
+                    <div class="article-container ">
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>B.A.F.A</h3>
+                                <p>Acueille d'enfant en sitution de handicap</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>Baccalauréat </h3>
+                                <p>Mention Bien</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>Permis B</h3>
+                                <p>------</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>PSC1</h3>
+                                <p>--------</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>Formation Intelligence Artificielle</h3>
+                                <p>Open Classroom</p>
+                            </div>
+                        </article>
+                        <article>
+                            <!--1-->
+                            <img src="./img/checkmark.jpg " alt="Experience Icon " class="icon " />
+
+                            <div>
+                                <h3>Formation HTML/CSS</h3>
+                                <p>Open Classroom</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/OIP.webp " alt=" flèche vers le bas " class="icon arrow " onclick="location.href='./#experience' " />
+    </section>
+    <section id="projets ">
+        <p class="section__text__p1 ">Parcourir mes projets</p>
+        <h1 class="title ">Projets</h1>
+        <div class="experience-details-container ">
+            <div class="about-containers ">
+                <div class="details-container color-container ">
+                    <div class="article-container ">
+                        <img src="./img/projet_1.png " alt="Projet 1 " class="project-img " />
+                    </div>
+                    <h2 class="experience-sub-title project-title ">Projet 1</h2>
+                </div>
+                <div class="details-container color-container ">
+                    <div class="article-container ">
+                        <img src="./img/portfolio.png " alt="Project 2 " class="project-img " />
+                    </div>
+                    <h2 class="experience-sub-title project-title ">Projet 2</h2>
+                </div>
+                <div class="details-container color-container ">
+                    <div class="article-container">
+                        <img src="./img/go_cours.png " alt="Project 3" class="project-img " />
+                    </div>
+                    <h2 class="experience-sub-title project-title ">Projet 3</h2>
+                </div>
+            </div>
+        </div>
+        <img src="./img/OIP.webp " alt=" flèche vers le bas " class="icon arrow " onclick="location.href='./#projets' " />
+    </section>
+    <section id="contact ">
+        <h1 class="title "> Contactez-moi</h1>
+        <div class="contact-info-upper-container ">*
+            <div class="contact-info-container ">
+                <img src="./img/email.jpg " alt="mail icon " class="icon contact-icon email-icon " />
+                <p>
+                    <a href="mailto:Adil14.Celik@gmail.com ">Adil14.Celik@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-info-container ">
+                <img src="./img/linkedin.png " alt="mail icon " class="icon contact-icon " />
+                <p>
+                    <a href="https://www.linkedin.com/in/adil-celik-90954a365/">Linkedin</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container ">
+                <ul class="nav-links ">
+                    <li> <a href="#about "> About</a></li>
+                    <li><a href="#experience "> Expérience</a></li>
+                    <li><a href="#projets "> Projets</a></li>
+                    <li><a href="#contact "> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Adil CELIK. All rights reserved </p>
+    </footer>
+    <script src=" ./js/script.js ">
+    </script>
+</body>
+
+</html>
