@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adil CELIK - Portfolio Dauphine | PSL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== */
+        /* STYLE DAUPHINE | PSL */
+        /* ==================== */
+        
+         :root {
+            --dauphine-blue: #0033A0;
+            --dauphine-dark: #002277;
+            --dauphine-light: #E8EDF9;
+            --dauphine-gold: #C9A03D;
+            --dauphine-gray: #5A6A7E;
+            --dauphine-light-gray: #F5F7FA;
+            --text-dark: #1A2C3E;
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--dauphine-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .section__text__p1 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--dauphine-gold);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        p {
+            color: var(--dauphine-gray);
+        }
+        /* NAVIGATION */
+        
+        #desktop-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 51, 160, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dauphine-blue);
+            cursor: default;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--dauphine-blue);
+        }
+        /* HAMBURGER MENU */
+        
+        #hamburger-nav {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            #desktop-nav {
+                display: none;
+            }
+            #hamburger-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.2rem 5%;
+                background: white;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            .hamburger-menu {
+                position: relative;
+            }
+            .hamburger-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 22px;
+                width: 28px;
+                cursor: pointer;
+            }
+            .hamburger-icon span {
+                width: 100%;
+                height: 2px;
+                background-color: var(--dauphine-blue);
+                transition: all 0.3s ease;
+            }
+            .menu-links {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: white;
+                width: 220px;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                border-radius: var(--border-radius);
+            }
+            .menu-links.open {
+                max-height: 300px;
+                padding: 1rem 0;
+            }
+            .menu-links li {
+                list-style: none;
+                padding: 0.8rem 1.5rem;
+            }
+            .menu-links a {
+                text-decoration: none;
+                color: var(--text-dark);
+                font-weight: 500;
+            }
+            .hamburger-icon.open span:first-child {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            .hamburger-icon.open span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger-icon.open span:last-child {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+        }
+        /* SECTIONS */
+        
+        section {
+            padding: 6rem 8%;
+            min-height: auto;
+        }
+        
+        #profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+            background: linear-gradient(135deg, white 0%, var(--dauphine-light) 100%);
+        }
+        
+        .section__pic-container img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 20px 40px rgba(0, 51, 160, 0.15);
+        }
+        
+        .section__text {
+            text-align: center;
+        }
+        
+        .section__text h1 {
+            font-size: 3.2rem;
+            margin: 0.5rem 0;
+            color: var(--dauphine-dark);
+        }
+        
+        .section__text__p2 {
+            font-size: 1.2rem;
+            color: var(--dauphine-blue);
+            font-weight: 500;
+        }
+        /* BOUTONS */
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            padding: 0.9rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+        
+        .btn-color-1 {
+            background: var(--dauphine-blue);
+            color: white;
+            border: 2px solid var(--dauphine-blue);
+        }
+        
+        .btn-color-1:hover {
+            background: var(--dauphine-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-color-2 {
+            background: transparent;
+            color: var(--dauphine-blue);
+            border: 2px solid var(--dauphine-blue);
+        }
+        
+        .btn-color-2:hover {
+            background: var(--dauphine-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 50%;
+            padding: 6px;
+        }
+        
+        .icon:hover {
+            transform: translateY(-3px);
+            background: var(--dauphine-light);
+        }
+        /* ABOUT - CENTRÉ */
+        
+        #about {
+            text-align: center;
+        }
+        
+        .about-containers {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+        
+        .details-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            text-align: center;
+            border: 1px solid #E2E8F0;
+            transition: var(--transition);
+            flex: 1;
+            min-width: 220px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .details-container:hover {
+            box-shadow: 0 10px 25px rgba(0, 51, 160, 0.08);
+            border-color: var(--dauphine-blue);
+        }
+        
+        .about-pic {
+            width: 280px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .about-details-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .text-container {
+            max-width: 700px;
+            margin: 1rem auto;
+            text-align: center;
+        }
+        
+        .text-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        /* EXPERIENCE */
+        
+        .article-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+        
+        article {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--dauphine-light-gray);
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+        }
+        
+        .experience-sub-title {
+            font-size: 1.6rem;
+            color: var(--dauphine-dark);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-left: 4px solid var(--dauphine-gold);
+            padding-left: 1rem;
+            display: inline-block;
+        }
+        /* PROJETS - GRILLE 3x2 */
+        
+        #projets .about-containers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid #E2E8F0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(0, 51, 160, 0.12);
+            border-color: var(--dauphine-blue);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-img.podcast-img {
+            object-fit: contain;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dauphine-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-description {
+            font-size: 0.9rem;
+            color: var(--dauphine-gray);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            flex: 1;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-tag {
+            background: var(--dauphine-light);
+            color: var(--dauphine-blue);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--dauphine-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            margin-top: auto;
+            cursor: pointer;
+        }
+        
+        .project-link:hover {
+            color: var(--dauphine-dark);
+            text-decoration: underline;
+        }
+        
+        .gocours-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .gocours-btn {
+            background: var(--dauphine-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .gocours-btn-outline {
+            background: transparent;
+            color: var(--dauphine-blue);
+            border: 1.5px solid var(--dauphine-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .gocours-btn:hover {
+            background: var(--dauphine-dark);
+            transform: translateY(-2px);
+        }
+        
+        .gocours-btn-outline:hover {
+            background: var(--dauphine-blue);
+            color: white;
+        }
+        
+        .no-link {
+            color: var(--dauphine-gray);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: auto;
+            cursor: default;
+        }
+        
+        .snake-preview {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+        
+        .snake-mini {
+            text-align: center;
+            color: white;
+        }
+        
+        .snake-mini span {
+            font-size: 3rem;
+            display: block;
+        }
+        
+        @media (max-width: 1024px) {
+            #projets .about-containers {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            #projets .about-containers {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        #contact {
+            background: var(--dauphine-light);
+            border-radius: 40px;
+            margin: 3rem 8%;
+            padding: 3rem;
+        }
+        
+        .contact-info-upper-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 60px;
+            padding: 1.5rem 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .contact-info-container a {
+            text-decoration: none;
+            color: var(--dauphine-blue);
+            font-weight: 500;
+        }
+        
+        footer {
+            background: var(--dauphine-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        footer .nav-links {
+            justify-content: center;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        footer .nav-links a {
+            color: white;
+        }
+        
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .arrow {
+            display: block;
+            margin: 2rem auto 0;
+            width: 40px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 900px) {
+            section {
+                padding: 3rem 5%;
+            }
+            #profile {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Adil CELIK</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Adil CELIK</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Expérience</a></li>
+                <li><a href="#projets" onclick="toggleMenu()">Projets</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./img/image_portfolio.jpg" alt="Adil photo" onerror="this.src='./img/image_portfoliot.jpg'">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Bonjour, je suis</p>
+            <h1 class="title">Adil CELIK</h1>
+            <p class="section__text__p2">Étudiant à <strong>Paris 1 Panthéon-Sorbonne</strong> <br> <span style="font-size: 0.9rem;">📌 Candidat à Université Paris-Dauphine | PSL</span></p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" id="cvBtn">📄 Mon CV</button>
+                <button class="btn btn-color-1" id="contactBtn">📞 Contact</button>
+            </div>
+            <div id="socials-container">
+                <img src="./img/linkedin.png" alt="LinkedIn" class="icon" id="linkedinBtn">
+                <img src="./img/img_gethub.png" alt="GitHub" class="icon" id="githubBtn">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section__text__p1">Pour en savoir plus sur moi</p>
+        <h1 class="title">À propos</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./img/serieux.jpg" alt="Adil" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./img/dev.jpg" alt="Expérience" class="icon">
+                        <h3>Expérience</h3>
+                        <p>+2 mois<br/>Développeur Site Web</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./img/educ.avif" alt="Éducation" class="icon">
+                        <h3>Parcours académique</h3>
+                        <p>Bac +2<br/>MIASHS - Paris 1 Panthéon-Sorbonne</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>Étudiant passionné par les mathématiques appliquées et l'informatique, je développe des compétences solides en développement web, en analyse de données et en développement d'applications. Actuellement à <strong>l'Université Paris 1 Panthéon-Sorbonne</strong>,
+                        j'ai candidaté pour intégrer <strong>l'Université Paris-Dauphine | PSL</strong> afin de poursuivre ma formation dans un environnement d'excellence.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/OIP.webp" alt="flèche" class="icon arrow" id="aboutArrow">
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">Explorez mes compétences</p>
+        <h1 class="title">Expérience & Formation</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Développement & Tech</h2>
+                    <div class="article-container">
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>HTML/CSS</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>Python</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>Java/JavaFX</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>SQL / PHP</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>R Studio</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>Montage Audio/Vidéo</h3>
+                                <p>Avancé</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Certifications</h2>
+                    <div class="article-container">
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>Baccalauréat</h3>
+                                <p>Mention Bien</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>B.A.F.A</h3>
+                                <p>Handicap & enfance</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>Formation IA</h3>
+                                <p>OpenClassroom</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>PSC1</h3>
+                                <p>Premiers secours</p>
+                            </div>
+                        </article>
+                        <article><img src="./img/checkmark.jpg" class="icon">
+                            <div>
+                                <h3>Permis B</h3>
+                                <p>---</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/OIP.webp" alt="flèche" class="icon arrow" id="expArrow">
+    </section>
+
+    <section id="projets">
+        <p class="section__text__p1">Parcourir mes projets</p>
+        <h1 class="title">Projets</h1>
+        <div class="about-containers">
+            <!-- 1. DataViz Explorer -->
+            <div class="project-card">
+                <img src="./img/analyse.jpg" alt="Analyse de données" class="project-img" onerror="this.src='./img/analyse.png'">
+                <div class="project-info">
+                    <h3 class="project-title">📊 DataViz Explorer</h3>
+                    <p class="project-description">Analyse approfondie d'un dataset Kaggle sur les tendances économiques. Nettoyage des données, visualisations interactives et extraction d'insights clés avec Python.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </div>
+                    <span class="no-link">📊 Projet académique</span>
+                </div>
+            </div>
+
+            <!-- 2. TaskFlow - TodoList -->
+            <div class="project-card">
+                <img src="./img/interface.jpg" alt="TodoList JavaFX" class="project-img" onerror="this.src='./img/interface.png'">
+                <div class="project-info">
+                    <h3 class="project-title">✅ TaskFlow - TodoList</h3>
+                    <p class="project-description">Application de gestion de tâches développée en JavaFX avec interface moderne. Ajout, suppression, modification et persistance des données.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">SceneBuilder</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <span class="no-link">✅ Application desktop</span>
+                </div>
+            </div>
+
+            <!-- 3. SimpLy Studio -->
+            <div class="project-card">
+                <img src="./img/podcast.jpg" alt="SimpLy Studio" class="project-img podcast-img" onerror="this.src='./img/podcast.png'">
+                <div class="project-info">
+                    <h3 class="project-title">🎙️ SimpLy Studio</h3>
+                    <p class="project-description">Monteur audio et vidéo pour le podcast SimpLy. Création de génériques, mixage sonore, montage vidéo, ajout d'effets et sous-titrage.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Audacity</span>
+                        <span class="tech-tag">DaVinci Resolve</span>
+                        <span class="tech-tag">Premiere Pro</span>
+                    </div>
+                    <span class="no-link">🎙️ Projet SimpLy</span>
+                </div>
+            </div>
+
+            <!-- 4. Portfolio Dynamique -->
+            <div class="project-card">
+                <img src="./img/portfolio.png" alt="Portfolio" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">🌐 Portfolio Dynamique</h3>
+                    <p class="project-description">Site portfolio responsive aux couleurs de l'Université Paris-Dauphine | PSL. Animations fluides, navigation intuitive et adaptation mobile parfaite.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <span class="no-link">🌐 Projet personnel</span>
+                </div>
+            </div>
+
+            <!-- 5. Snake Game -->
+            <div class="project-card">
+                <div class="snake-preview">
+                    <div class="snake-mini">
+                        <span>🐍</span>
+                        <small style="display:block; margin-top:8px;">Snake Game</small>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">🐍 Snake Game</h3>
+                    <p class="project-description">Jeu Snake classique recréé en Java. Contrôlez le serpent, mangez les fruits et évitez les collisions. Score en temps réel.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5 Canvas</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                    <span class="no-link">🐍 Jeu Java</span>
+                </div>
+            </div>
+
+            <!-- 6. GoCours -->
+            <div class="project-card">
+                <img src="./img/go_cours.png" alt="GoCours" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">📚 GoCours</h3>
+                    <p class="project-description">Plateforme de cours particuliers adaptés à votre niveau. Progresser à votre rythme et atteindre vos objectifs scolaires.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="gocours-buttons">
+                        <a href="https://gocours.fr" target="_blank" class="gocours-btn">Découvrir nos offres</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/OIP.webp" alt="flèche" class="icon arrow" id="projetArrow">
+    </section>
+
+    <section id="contact">
+        <h1 class="title">Contactez-moi</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./img/email.jpg" alt="Email" class="icon contact-icon">
+                <p><a href="mailto:Adil14.Celik@gmail.com">Adil14.Celik@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./img/linkedin.png" alt="LinkedIn" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/adil-celik-45a010370" target="_blank">linkedin.com/in/adil-celik-45a010370</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p>Copyright © 2025 Adil CELIK. All rights reserved | Candidat à Université Paris-Dauphine | PSL</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-links');
+            const icon = document.querySelector('.hamburger-icon');
+            if (menu) menu.classList.toggle('open');
+            if (icon) icon.classList.toggle('open');
+        }
+
+        const cvBtn = document.getElementById('cvBtn');
+        if (cvBtn) {
+            cvBtn.addEventListener('click', function() {
+                window.open('./CV_Adil_CELIK(st).pdf', '_blank');
+            });
+        }
+
+        const contactBtn = document.getElementById('contactBtn');
+        if (contactBtn) {
+            contactBtn.addEventListener('click', function() {
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const linkedinBtn = document.getElementById('linkedinBtn');
+        if (linkedinBtn) {
+            linkedinBtn.addEventListener('click', function() {
+                window.open('https://www.linkedin.com/in/adil-celik-45a010370', '_blank');
+            });
+        }
+
+        const githubBtn = document.getElementById('githubBtn');
+        if (githubBtn) {
+            githubBtn.addEventListener('click', function() {
+                window.open('https://github.com/adil14celik-hash?tab=repositories', '_blank');
+            });
+        }
+
+        const aboutArrow = document.getElementById('aboutArrow');
+        if (aboutArrow) {
+            aboutArrow.addEventListener('click', function() {
+                document.getElementById('experience').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const expArrow = document.getElementById('expArrow');
+        if (expArrow) {
+            expArrow.addEventListener('click', function() {
+                document.getElementById('projets').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const projetArrow = document.getElementById('projetArrow');
+        if (projetArrow) {
+            projetArrow.addEventListener('click', function() {
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        document.querySelectorAll('.nav-links a, .menu-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(targetId);
+                    if (target) target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                if (window.innerWidth <= 768 && typeof toggleMenu === 'function') toggleMenu();
+            });
+        });
+    </script>
+</body>
+
+</html>
